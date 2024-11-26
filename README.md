@@ -8,7 +8,10 @@
 
 部署该Server后，需要在 Cloudflare 上配置以下环境变量：
 
-| 环境变量名称               | 环境变量值                            |
-|----------------------|----------------------------------|
-| GH_APP_CLIENT_ID     | 填写 GitHub App 对应 client_id       |
-| GH_APP_CLIENT_SECRET | 填写 GitHub App 中生成的 client secret |
+| 环境变量名称               | 环境变量值                                                      | 是否必选  |
+|----------------------|------------------------------------------------------------|-------|
+| GH_APP_CLIENT_ID     | 填写 GitHub App 对应 client_id                                 | true  |
+| GH_APP_CLIENT_SECRET | 填写 GitHub App 中生成的 client secret                           | true  |
+| SITE_URL             | 你的前端站点地址                                                   | true  |
+| ALLOWED_ORIGINS      | 允许的除SITE_URL外的额外源，多个源使用","隔开                               | false |
+| GITHUB_TOKEN         | 个人申请的Github Personal Token, 未提供下代理会有60RPH的限制，添加后可达到5000RPH | false |
